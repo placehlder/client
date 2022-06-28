@@ -6,5 +6,27 @@
 }
 
 :root {
+  /* font */
   font-family: 'poppins', sans-serif;
+
+  /* colors */
+  --baby-blue: hsl(195, 53%, 79%);
+  --dark-blue: hsl(222, 16%, 28%);
+  --medium-grey: hsl(226, 11%, 69%);
+  --light-grey: hsl(0, 0%, 98%);
+  --complete-black: hsl(0, 0%, 0%);
+  --complete-white: hsl(0, 0%, 100%);
+
+  /* font weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* font size */
+  --font-size-small: 0.9em;
+  --font-size-regular: 1em;
+  --font-size-medium: 1.4em;
 }

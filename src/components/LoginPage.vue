@@ -1,10 +1,6 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="logincontainer">
-    <div class="login">
+    <div class="loginform">
       <h1>Log into Your Account</h1>
       <form hx-post="/login">
         <input class="inputbox" name="username" placeholder="Enter Username"><br/>
@@ -23,41 +19,35 @@
 <style scoped>
 @import "../assets/base.css";
 
-:root {
-  background-color: #fff;
-}
-
 h1 {
   display: flex;
   justify-content: center;
-  font-weight: 600;
-  color: #3B4252;
-  font-size: 1.4em;
+  font-weight: var(--font-weight-semibold);
+  color: var(--dark-blue);
+  font-size: var(--font-size-medium);
   margin-bottom: 2em;
   cursor: pointer;
 }
 
 input {
-  font-family: "Poppins", sans-serif;
-  color: #3B4252;
-  font-weight: 500;
-  font-size: 0.9em;
+  color: var(--dark-blue);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-small);
   padding: 1.4em 0em 1.4em 1.2em;
   width: 22em;
   border-style: none;
   border-radius: 0.3em;
-  background-color: #F9F9F9;
+  background-color: var(--light-grey);
   margin: 0em 0em 1.2em 0em;
   outline: none;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
   color: #3B4252;
-  font-weight: 600;
-  font-size: 1em;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-regular);
   width: 100%;
-  background-color: #ADD8E6;
+  background-color: var(--baby-blue);
   padding: 1.2em 0em 1.2em 0em;
   transition: background-color 0.2s ease-in-out;
   border-style: none;
@@ -67,19 +57,19 @@ button {
 }
 
 .button:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--complete-white);
+  color: var(--complete-black);
 }
 
 ::placeholder {
   font-family: "Poppins", sans-serif;
-  color: #A8ACB9;
-  font-weight: 500;
-  font-size: 0.9em;
+  color: var(--medium-grey);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-small);
 }
 
 ::selection {
-  background: #ADD8E6;
+  background: var(--baby-blue);
 }
 
 .logincontainer {
@@ -100,24 +90,24 @@ button {
 
 .router {
   text-decoration: none;
-  color: #3B4252;
-  font-weight: 500;
-  font-size: 0.9em;
+  color: var(--dark-blue);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-weight-small);
   padding-right: 1.5em;
 }
 
 .terms {
   text-decoration: none;
-  color: #3B4252;
-  font-weight: 500;
-  font-size: 0.9em;
+  color: var(--dark-blue);
+  font-weight: var(--font-weight-small);
+  font-size: var(--font-weight-small);
 }
 
 .github {
   text-decoration: none;
-  color: #3B4252;
-  font-weight: 500;
-  font-size: 0.9em;
+  color: var(--dark-blue);
+  font-weight: var(--font-weight-small);
+  font-size: var(--font-weight-small);
   padding-left: 1.5em;
 }
 
