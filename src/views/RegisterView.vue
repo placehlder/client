@@ -106,15 +106,15 @@
 
 /* media query */
 @media (max-width: 1024px) {
-  h1 {
+  .header {
     font-size: var(--font-size-regular);
   }
 
-  input {
+  .box {
     width: 18em;
   }
 
-  button {
+  .submit {
     font-size: var(--font-size-small);
   }
 
