@@ -1,24 +1,17 @@
 <template>
-  <div class="container">
-    <div>
+    <div class="container">
       <h1 class="header">Log into Your Account</h1>
-      <form hx-post="/login">
+      <form>
         <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input class="box" name="password" placeholder="Enter Password" /><br />
+        <input class="box" name="password" placeholder="Enter Password" />
         <button class="submit">Log In</button>
       </form>
     </div>
     <div class="bar">
       <RouterLink class="tags" to="/register">Register</RouterLink>
-      <h3 class="tags">Terms of Service</h3>
-      <a
-        class="tags"
-        href="https://github.com/placehlder/client"
-        target="_blank"
-        >Github</a
-      >
+      <a class="tags" href="https://github.com/placehlder" target="_blank">Terms of Service</a>
+      <a class="tags" href="https://github.com/placehlder" target="_blank">Github</a>
     </div>
-  </div>
 </template>
 
 <style scoped>
@@ -46,12 +39,12 @@
   color: var(--dark-blue);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-small);
-  padding: 1.4em 0em 1.4em 1.2em;
+  padding: 1.4em 0 1.4em 1.2em;
   width: 22em;
   border-style: none;
   border-radius: 0.3em;
   background-color: var(--light-grey);
-  margin: 0em 0em 1.2em 0em;
+  margin-bottom: 1.2em;
   outline: none;
 }
 
@@ -70,7 +63,7 @@
   font-size: var(--font-size-regular);
   width: 100%;
   background-color: var(--baby-blue);
-  padding: 1.2em 0em 1.2em 0em;
+  padding: 1.2em 0 1.2em 0;
   border-style: none;
   border-radius: 0.3em;
   margin-bottom: 0.8em;
@@ -85,6 +78,7 @@
 /* container */
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -117,10 +111,6 @@
   }
   button {
     font-size: var(--font-size-small);
-  }
-  .bar {
-    justify-content: center;
-    left: 100;
   }
   .tags {
     font-size: var(--font-size-even-smaller);

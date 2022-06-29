@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    <RegisterPage />
+
   </main>
 </template>
