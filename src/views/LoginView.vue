@@ -78,9 +78,8 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.button:hover {
-  background-color: var(--complete-white);
-  color: var(--complete-black);
+.submit:hover {
+  background-color: var(--baby-purple);
 }
 
 /* container */
