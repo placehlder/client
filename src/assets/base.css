@@ -7,7 +7,7 @@
 
 :root {
   /* font */
-  font-family: 'poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   /* colors */
   --baby-blue: hsl(195, 53%, 79%);
@@ -26,7 +26,8 @@
   --font-weight-extrabold: 800;
 
   /* font size */
-  --font-size-small: 0.9em;
-  --font-size-regular: 1em;
   --font-size-medium: 1.4em;
+  --font-size-regular: 1em;
+  --font-size-small: 0.9em;
+  --font-size-even-smaller: 0.8em;
 }
