@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
-    <div>
+    <div class="container">
       <h1 class="header">Log into Your Account</h1>
       <form>
         <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input class="box" name="password" placeholder="Enter Password" /><br />
+        <input :type="visibility" class="box" name="password" placeholder="Enter Password" /><br />
         <button class="submit">Log In</button>
       </form>
     </div>
@@ -13,7 +12,6 @@
       <a class="tags" href="https://github.com/placehlder" target="_blank">Terms of Service</a>
       <a class="tags" href="https://github.com/placehlder" target="_blank">Github</a>
     </div>
-  </div>
 </template>
 
 <style scoped>
@@ -123,3 +121,13 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      visibility: "password"
+    }
+  }
+}
+</script>

@@ -4,7 +4,7 @@
       <h1 class="header">Register a New Account</h1>
       <form>
         <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input class="box" name="password" placeholder="Enter Password" /><br />
+        <input :type="visibility" :maxlength="maxlength" class="box" name="password" placeholder="Enter Password" /><br />
         <button class="submit">Register</button>
       </form>
     </div>
@@ -123,3 +123,13 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      visibility: "password"
+    }
+  }
+}
+</script>
