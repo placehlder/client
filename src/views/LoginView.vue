@@ -1,9 +1,10 @@
 <template>
-    <div class="container">
+  <div class="container">
+    <div>
       <h1 class="header">Log into Your Account</h1>
       <form>
         <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input class="box" name="password" placeholder="Enter Password" />
+        <input class="box" name="password" placeholder="Enter Password" /><br />
         <button class="submit">Log In</button>
       </form>
     </div>
@@ -12,11 +13,11 @@
       <a class="tags" href="https://github.com/placehlder" target="_blank">Terms of Service</a>
       <a class="tags" href="https://github.com/placehlder" target="_blank">Github</a>
     </div>
+  </div>
 </template>
 
 <style scoped>
 @import "../assets/base.css";
-
 /* highlighting */
 ::selection {
   background: var(--baby-blue);
@@ -72,7 +73,7 @@
 }
 
 .submit:hover {
-  background-color: var(--baby-purple);
+  background-color: var(--baby-green);
 }
 
 /* container */
@@ -94,6 +95,7 @@
   padding-bottom: 1em;
 }
 
+/* bottom bar items */
 .tags {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-small);
@@ -102,16 +104,20 @@
   margin-right: 1.5em;
 }
 
+/* media query */
 @media (max-width: 1024px) {
   h1 {
     font-size: var(--font-size-regular);
   }
+
   input {
     width: 18em;
   }
+
   button {
     font-size: var(--font-size-small);
   }
+
   .tags {
     font-size: var(--font-size-even-smaller);
   }
