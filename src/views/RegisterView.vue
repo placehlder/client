@@ -19,12 +19,8 @@
   </div>
   <div class="bar">
     <RouterLink class="tags" to="/auth/login">Login</RouterLink>
-    <a class="tags" href="https://github.com/placehlder" target="_blank"
-      >Terms of Service</a
-    >
-    <a class="tags" href="https://github.com/placehlder" target="_blank"
-      >Github</a
-    >
+    <a class="tags" href="https://github.com/placehlder" target="_blank">Terms of Service</a>
+    <a class="tags" href="https://github.com/placehlder" target="_blank">Github</a>
   </div>
 </template>
 
