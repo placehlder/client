@@ -1,18 +1,30 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="header">Register a New Account</h1>
-      <form>
-        <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input :type="visibility" :maxlength="maxlength" class="box" name="password" placeholder="Enter Password" /><br />
-        <button class="submit">Register</button>
-      </form>
-    </div>
-    <div class="bar">
-      <RouterLink class="tags" to="/login">Log In</RouterLink>
-      <a class="tags" href="https://github.com/placehlder" target="_blank">Terms of Service</a>
-      <a class="tags" href="https://github.com/placehlder" target="_blank">Github</a>
-    </div>
+    <h1 class="header">Register a New Account</h1>
+    <form @submit.prevent="submit">
+      <input
+        type="text"
+        class="box"
+        name="username"
+        placeholder="Enter Username"
+      /><br />
+      <input
+        type="password"
+        class="box"
+        name="password"
+        placeholder="Enter Password"
+      /><br />
+      <button class="submit" type="submit">Register</button>
+    </form>
+  </div>
+  <div class="bar">
+    <RouterLink class="tags" to="/auth/login">Login</RouterLink>
+    <a class="tags" href="https://github.com/placehlder" target="_blank"
+      >Terms of Service</a
+    >
+    <a class="tags" href="https://github.com/placehlder" target="_blank"
+      >Github</a
+    >
   </div>
 </template>
 
@@ -22,7 +34,6 @@
 ::selection {
   background: var(--baby-blue);
 }
-
 /* title */
 .header {
   display: flex;
@@ -33,7 +44,6 @@
   margin-bottom: 2em;
   cursor: pointer;
 }
-
 /* input */
 .box {
   font-family: "Poppins", sans-serif;
@@ -48,14 +58,12 @@
   margin-bottom: 1.2em;
   outline: none;
 }
-
 ::placeholder {
   font-family: "Poppins", sans-serif;
   color: var(--medium-grey);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-small);
 }
-
 /* submit button */
 .submit {
   font-family: "Poppins", sans-serif;
@@ -71,11 +79,9 @@
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
-
 .submit:hover {
   background-color: var(--baby-green);
 }
-
 /* container */
 .container {
   display: flex;
@@ -84,7 +90,6 @@
   justify-content: center;
   height: 100vh;
 }
-
 /* bottom bar */
 .bar {
   display: flex;
@@ -94,7 +99,6 @@
   padding-left: 2em;
   padding-bottom: 1em;
 }
-
 /* bottom bar items */
 .tags {
   font-weight: var(--font-weight-semibold);
@@ -103,21 +107,17 @@
   color: var(--dark-blue);
   margin-right: 1.5em;
 }
-
 /* media query */
 @media (max-width: 1024px) {
   .header {
     font-size: var(--font-size-regular);
   }
-
   .box {
     width: 18em;
   }
-
   .submit {
     font-size: var(--font-size-small);
   }
-
   .tags {
     font-size: var(--font-size-even-smaller);
   }
@@ -125,10 +125,23 @@
 </style>
 
 <script>
+import axios from 'axios';
+import {useRouter} from 'vue-router';
+
 export default {
-  data() {
+  method: "POST",
+  name: "Register",
+  setup() {
+    const router = useRouter;
+    const submit = async e => {
+        const form = new FormData(e.target);
+        const inputs = Object.fromEntries(form.entries());
+        await axios.post('http://localhost:5000/auth/login', inputs);
+
+        await router.push('./login');
+    }
     return {
-      visibility: "password"
+        submit
     }
   }
 }
