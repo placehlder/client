@@ -43,7 +43,7 @@
   font-size: var(--font-size-medium);
   color: var(--dark-blue);
   margin-bottom: 2em;
-  cursor: pointer;
+  cursor: default;
 }
 
 /* input */
@@ -148,7 +148,7 @@ export default {
     const submit = async (e) => {
       const form = new FormData(e.target);
       const inputs = Object.fromEntries(form.entries());
-      await axios.post("http://localhost:5000/auth/login", inputs);
+      await axios.post("http://localhost:5000/auth/register", inputs);
 
       await router.push("./login");
     };
