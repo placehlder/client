@@ -1,9 +1,9 @@
 <template>
     <div class="container">
       <h1 class="header">Log into Your Account</h1>
-      <form>
-        <input class="box" name="username" placeholder="Enter Username" /><br />
-        <input :type="visibility" class="box" name="password" placeholder="Enter Password" /><br />
+      <form @submit.prevent="handleSubmit">
+        <input type="text" v-model="user.name" class="box" name="username" placeholder="Enter Username" /><br />
+        <input type="password" v-model="user.password" :type="visibility" class="box" name="password" placeholder="Enter Password" /><br />
         <button class="submit">Log In</button>
       </form>
     </div>
@@ -126,7 +126,16 @@
 export default {
   data() {
     return {
-      visibility: "password"
+      visibility: "password",
+      user: {
+        name: '',
+        password: ''
+      }
+    }
+  },
+  method: {
+    handleSubmit() {
+
     }
   }
 }
